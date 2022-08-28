@@ -38,6 +38,6 @@ class Webservice {
         }
 
         let movieResponse = try? JSONDecoder().decode(MovieResponse.self, from: data)
-        return movieResponse?.movies ?? []
+        return movieResponse?.results ?? []
     }
 }
