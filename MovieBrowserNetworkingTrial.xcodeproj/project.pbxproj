@@ -64,8 +64,8 @@
 				AF61BFAE28B9386C005ACAEA /* Assets.xcassets */,
 				AF61BFB828B9389A005ACAEA /* Webservice.swift */,
 				AF61BFBA28B938DC005ACAEA /* Movie.swift */,
-				AF61BFB028B9386C005ACAEA /* Preview Content */,
 				AF61BFBC28B93D0A005ACAEA /* MovieListViewModel.swift */,
+				AF61BFB028B9386C005ACAEA /* Preview Content */,
 			);
 			path = MovieBrowserNetworkingTrial;
 			sourceTree = "<group>";
