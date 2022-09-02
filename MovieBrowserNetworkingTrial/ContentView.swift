@@ -69,18 +69,18 @@ struct infoPageView: View {
         VStack {
             Text(movie.title)
                 .font(.system(size: 36))
-            Text("Release Date: \(movie.releaseDate?.monthDayYearString ?? "Release date non-existent")")
+            Text("Release Date: \(movie.releaseDate?.monthDayYearDigitsOnlyString ?? "Release date non-existent")")
                 .font(.system(size: 14))
                 .foregroundColor(.gray)
                 .padding(20)
             
             HStack {
-                AsyncImage(url: movie.posterPath!) { image in
-                    image.resizable()
-                } placeholder: {
-                    ProgressView()
-                }
-                .frame(width: 100, height: 200)
+//                AsyncImage(url: movie.posterPath)) { image in
+//                    image.resizable()
+//                } placeholder: {
+//                    ProgressView()
+//                }
+//                .frame(width: 100, height: 200)
                 
                 Text(movie.overview)
             }

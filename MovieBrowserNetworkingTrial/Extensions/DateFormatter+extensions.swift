@@ -16,8 +16,9 @@ extension DateFormatter {
     
     // Create date extension that will return m/dd/yy from infoPageView
     
-//    static var dayMonthYearFormatting: DateFormatter {
-//        let formatter = DateFormatter
-//        formatter.dateFormat
-//    }
+    static var monthDayYearDigitsOnlyFormatting: DateFormatter {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "M/d/yy"
+        return formatter
+    }
 }

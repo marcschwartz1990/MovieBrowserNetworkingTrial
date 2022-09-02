@@ -11,4 +11,8 @@ extension Date {
     var monthDayYearString: String {
         DateFormatter.monthDayYearFormatting.string(from: self)
     }
+    
+    var monthDayYearDigitsOnlyString: String {
+        DateFormatter.monthDayYearDigitsOnlyFormatting.string(from: self)
+    }
 }
