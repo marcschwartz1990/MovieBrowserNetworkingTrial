@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 
 enum NetworkError: Error {
@@ -30,6 +31,7 @@ class Webservice {
             print("Invalid URL")
             throw NetworkError.badURL
         }
+
         
         let (data, response) = try await URLSession.shared.data(from: url)
 
@@ -38,6 +40,34 @@ class Webservice {
         }
 
         let movieResponse = try? JSONDecoder().decode(MovieResponse.self, from: data)
+
         return movieResponse?.results ?? []
+    }
+    
+    
+    
+    func getImage(imagePath: String) async throws -> Image? {
+        var components = URLComponents()
+    //    https://image.tmdb.org/t/p/w500/kqjL17yufvn9OVLyXYpvtyrFfak.jpg
+            components.scheme = "https"
+            components.host = "image.tmdb.org"
+            components.path = "/t/p/original" + "\(imagePath)"
+          
+        guard let url = components.url else {
+            print("Invalid URL")
+            throw NetworkError.badURL
+        }
+
+        
+        let (data, response) = try await URLSession.shared.data(from: url)
+
+        guard (response as? HTTPURLResponse)?.statusCode == 200 else {
+            throw NetworkError.badID
+        }
+
+        // TODO: Get data from shared URLSession. Initialize UIImage from data.
+        // Initialize Image from UIImage and return optional Image
+        
+        
     }
 }

@@ -34,19 +34,23 @@ struct MovieViewModel {
         movie.id
     }
     
-    var popularity: Double {
-        movie.popularity
+    var voteAverage: Double {
+        movie.voteAverage
     }
     
-    var releaseDate: String {
-        movie.releaseDate
+    var releaseDate: Date? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-mm-dd"
+        
+        let date = dateFormatter.date(from: movie.releaseDate)
+        return date
     }
     
     var overview: String {
         movie.overview
     }
     
-    var posterPath: URL? {
-        URL(string: movie.posterPath)
+    var posterPath: String? {
+        movie.posterPath ?? nil
     }
 }

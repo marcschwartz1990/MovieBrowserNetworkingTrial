@@ -42,21 +42,22 @@ struct searchResultView: View {
     let movie: MovieViewModel
     
     var body: some View {
-        VStack (alignment: .leading) {
-            
-        Text(movie.title)
-            .font(.system(size: 22))
-            
-            HStack {
-                Text("\(movie.popularity)")
-                    .font(.system(size: 10))
-                    .fixedSize(horizontal: true, vertical: false)
+        HStack {
+            VStack (alignment: .leading){
+                Text(movie.title)
+                    .font(.system(size: 20))
+                    
+                Text(movie.releaseDate?.monthDayYearString ?? "Release date non-existent")
+                    .font(.system(size: 14))
+                    .foregroundColor(.gray)
             }
             
+            Spacer()
             
-        Text(movie.releaseDate)
-            .font(.system(size: 14))
-            .foregroundColor(.gray)
+            VStack (alignment: .trailing) {
+                Text(String(format: "%.1f", movie.voteAverage))
+                    .font(.system(size: 12))
+            }
         }
     }
 }
@@ -68,7 +69,7 @@ struct infoPageView: View {
         VStack {
             Text(movie.title)
                 .font(.system(size: 36))
-            Text("Release Date: \(movie.releaseDate)")
+            Text("Release Date: \(movie.releaseDate?.monthDayYearString ?? "Release date non-existent")")
                 .font(.system(size: 14))
                 .foregroundColor(.gray)
                 .padding(20)

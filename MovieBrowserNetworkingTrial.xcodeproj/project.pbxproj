@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF00BC5928C1756E001A8D01 /* DateFormatter+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF00BC5828C1756E001A8D01 /* DateFormatter+extensions.swift */; };
+		AF00BC5B28C17711001A8D01 /* Date+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF00BC5A28C17711001A8D01 /* Date+extensions.swift */; };
 		AF61BFAB28B9386B005ACAEA /* MovieBrowserNetworkingTrialApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF61BFAA28B9386B005ACAEA /* MovieBrowserNetworkingTrialApp.swift */; };
 		AF61BFAD28B9386B005ACAEA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF61BFAC28B9386B005ACAEA /* ContentView.swift */; };
 		AF61BFAF28B9386C005ACAEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF61BFAE28B9386C005ACAEA /* Assets.xcassets */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AF00BC5828C1756E001A8D01 /* DateFormatter+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+extensions.swift"; sourceTree = "<group>"; };
+		AF00BC5A28C17711001A8D01 /* Date+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+extensions.swift"; sourceTree = "<group>"; };
 		AF61BFA728B9386B005ACAEA /* MovieBrowserNetworkingTrial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieBrowserNetworkingTrial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF61BFAA28B9386B005ACAEA /* MovieBrowserNetworkingTrialApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieBrowserNetworkingTrialApp.swift; sourceTree = "<group>"; };
 		AF61BFAC28B9386B005ACAEA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -39,6 +43,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF00BC5728C17544001A8D01 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AF00BC5828C1756E001A8D01 /* DateFormatter+extensions.swift */,
+				AF00BC5A28C17711001A8D01 /* Date+extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		AF61BF9E28B9386B005ACAEA = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +77,7 @@
 				AF61BFAE28B9386C005ACAEA /* Assets.xcassets */,
 				AF61BFB828B9389A005ACAEA /* Webservice.swift */,
 				AF61BFBA28B938DC005ACAEA /* Movie.swift */,
+				AF00BC5728C17544001A8D01 /* Extensions */,
 				AF61BFBC28B93D0A005ACAEA /* MovieListViewModel.swift */,
 				AF61BFB028B9386C005ACAEA /* Preview Content */,
 			);
@@ -152,6 +166,8 @@
 				AF61BFAB28B9386B005ACAEA /* MovieBrowserNetworkingTrialApp.swift in Sources */,
 				AF61BFBB28B938DC005ACAEA /* Movie.swift in Sources */,
 				AF61BFB928B9389A005ACAEA /* Webservice.swift in Sources */,
+				AF00BC5B28C17711001A8D01 /* Date+extensions.swift in Sources */,
+				AF00BC5928C1756E001A8D01 /* DateFormatter+extensions.swift in Sources */,
 				AF61BFBD28B93D0A005ACAEA /* MovieListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
